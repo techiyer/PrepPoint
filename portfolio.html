@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prep Point</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+    :root {
+        --accent: #04da97;
+        --border-width: 6px;
+        --border-radius: 55px;
+        --font-size: 30px;
+        }
+    .container {
+        perspective: 800px;
+        max-width: fit-content;
+        margin-top: 25px;
+        text-align: center;
+    }
+    h2{
+        color: blanchedalmond;
+        font-size: 3em;
+        font-family: cursive;
+        margin-top: 5px;
+    }
+    .togle {
+        position: relative;
+        border: solid var(--border-width) var(--accent);
+        border-radius: var(--border-radius);
+        transition: transform cubic-bezier(0, 0, 0.30, 2) .4s;
+        transform-style: preserve-3d;
+        perspective: 800px;
+    }
+
+    .togle>input[type="radio"] {
+        display: none;
+    }
+
+    .togle>#choice1:checked~#flap {
+        transform: rotateY(-180deg);
+    }
+
+    .togle>#choice1:checked~#flap>.content {
+        transform: rotateY(-180deg);
+    }
+
+    .togle>#choice2:checked~#flap {
+        transform: rotateY(0deg);
+    }
+
+    .togle>label {
+        display: inline-block;
+        min-width: 170px;
+        padding: 30px;
+        font-size: var(--font-size);
+        text-align: center;
+        color: var(--accent);
+        cursor: pointer;
+    }
+
+    .togle>label,
+    .togle>#flap {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    .togle>#flap {
+        position: absolute;
+        top: calc( 0px - var(--border-width));
+        left: 50%;
+        height: calc(100% + var(--border-width) * 2);
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size);
+        background-color: var(--accent);
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        transform-style: preserve-3d;
+        transform-origin: left;
+        transition: transform cubic-bezier(0.4, 0, 0.2, 1) .5s;
+    }
+
+    .togle>#flap>.content {
+        color: #333;
+        transition: transform 0s linear .25s;
+        transform-style: preserve-3d;
+    }
+
+    @media only screen and (max-width: 768px) {
+    .container {
+        perspective: 800px;
+        max-width: fit-content;
+        margin: 35px -10px 25px 0px;
+    }
+    }
+--------------------------------------------------------------------------------------------------------------------------------------------
+    label {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    }
+
+    .btn:hover {
+        cursor: pointer !important;
+    }
+
+    .btn:active {
+        box-shadow: 0 1px #666 !important;
+        transform: translateY(2px) !important;
+    }
+    .btn {
+        display: inline-block;
+        font-size: 25px;
+        font-weight: bold;
+        height: 70px;
+        width: 170px;
+        box-shadow: 0 3px #999;
+        text-align: center;
+        margin: 10px 3px 10px 3px;
+    }
+    .btn-sık {
+        transition: all 0.2s ease;
+        background-color: white ;
+        border: 2px solid #f44336 !important;
+        box-shadow: 0 3px #d32f2f !important;
+        min-width: 150px;
+        border-radius: 20px;
+    }
+
+
+        btn-sık::selection{
+            background: green;
+        }
+
+    input[type="radio"] {
+         position: absolute;
+      visibility: hidden;
+    }
+    input[type="radio"] + div {
+        position: relative;
+    }
+    input[type="radio"]:checked + div {
+      background-color: #ef5350;
+    }
+    input[type="radio"]:checked + div>span {
+      color: white;
+    }
+    input[type="radio"] + div>span {
+    position: relative;
+    top: 25%;}
+
+    input[type="radio"]:checked + div::before {
+        font-family: FontAwesome;
+        content: "✔";
+        position: absolute;
+        bottom: 31px;
+        font-size: 21px;
+        color: white;
+        right: -5px;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        transform: rotate(30deg);
+        animation: fall 0.5s forwards;
+    }
+
+    #col2item{
+        display: inline-block;
+    }
+
+    @keyframes fall {
+        100% {
+            -webkit-transform: translate(-5px,5px) rotate(30deg);
+            -moz-transform: translate(-5px,5px) rotate(30deg);
+            -o-transform: translate(-5px,5px) rotate(30deg);
+            -ms-transform: translate(-5px,5px) rotate(30deg);
+            transform: translate(-5px,5px) rotate(30deg);
+        }
+    }
+
+    @-moz-keyframes fall {
+        100% {
+            -webkit-transform: translate(-5px,5px) rotate(30deg);
+            -moz-transform: translate(-5px,5px) rotate(30deg);
+            -o-transform: translate(-5px,5px) rotate(30deg);
+            -ms-transform: translate(-5px,5px) rotate(30deg);
+            transform: translate(-5px,5px) rotate(30deg);
+        }
+    }
+
+    @-webkit-keyframes fall {
+         100% {
+            -webkit-transform: translate(-5px,5px) rotate(30deg);
+            -moz-transform: translate(-5px,5px) rotate(30deg);
+            -o-transform: translate(-5px,5px) rotate(30deg);
+            -ms-transform: translate(-5px,5px) rotate(30deg);
+            transform: translate(-5px,5px) rotate(30deg);
+        }
+    }
+
+    .btn-push {
+      position: center;
+      margin-top: 20px;
+      font-family: "Open Sans";
+      text-decoration: none;
+      font-size: 25px;
+      background: #e1e1e1;
+      padding: 15px 50px;
+      margin: 10px 10px;
+      border: 2px solid #000000;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
+      -webkit-box-shadow: 0px 5px 0px #000000;
+      -moz-box-shadow: 0px 5px 0px #000000;
+      -ms-box-shadow: 0px 5px 0px #000000;
+      -o-box-shadow: 0px 5px 0px #000000;
+      box-shadow: 9px 8px 1px 1px #fff;
+      color: #222;
+      text-shadow: 1px 1px 1px #fff;
+      -webkit-transition: All 250ms ease;
+      -moz-transition: All 250ms ease;
+      -o-transition: All 250ms ease;
+      -ms-transition: All 250ms ease;
+      transition: All 250ms ease;
+    }
+    /*==========  Active State  ==========*/
+    .btn-push:active {
+      position: relative;
+      top: 5px;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      -ms-box-shadow: none !important;
+      -o-box-shadow: none !important;
+      box-shadow: none !important;
+      -webkit-transition: All 250ms ease;
+      -moz-transition: All 250ms ease;
+      -o-transition: All 250ms ease;
+      -ms-transition: All 250ms ease;
+      transition: All 250ms ease;
+    }
+
+    </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Mohit Iyer</h3>
+        <p class="post">front end developer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="education.html">education</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="Study_Materials.html">Study Materials</a></li>         <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> my <span>portfolio</span> </h1>
+    
+    <h2>Select Board :</h2>
+    <div class="container">
+
+        <form class="togle">
+
+            <input type="radio" id="choice1" name="choice" value="NCERT">
+            <label for="choice1">NCERT</label>
+
+            <input type="radio" id="choice2" name="choice" value="ICSE">
+            <label for="choice2">ICSE</label>
+
+            <div id="flap"><span class="content">productive</span></div>
+
+        </form>
+    </div>
+    <h2>Select Class :</h2>
+    <br/>
+    <div class="container" id="col2item">
+        <label>
+            <input id="9" type="radio" checked name="class"> 
+            <div  class="btn btn-sık"><span>Class 9</span></div> 
+        </label>
+        <label >
+            <input id="10" type="radio"  name="class"> 
+            <div class="btn btn-sık"><span>Class 10</span></div>
+        </label>
+        <label>
+            <input id="11" type="radio" name="class"> 
+            <div  class="btn btn-sık"><span>Class 11</span></div> 
+        </label>
+        <label>
+            <input id="12" type="radio"  name="class"> 
+            <div class="btn btn-sık"><span>Class 12</span></div>
+        </label>
+        <br/>
+        <button class="btn-push" onclick="jsubmit()">Try it</button>
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script type="text/javascript">
+const st = {};
+
+st.flap = document.querySelector('#flap');
+st.togle = document.querySelector('.togle');
+
+st.choice1 = document.querySelector('#choice1');
+st.choice2 = document.querySelector('#choice2');
+
+st.flap.addEventListener('transitionend', () => {
+
+    if (st.choice1.checked) {
+        st.togle.style.transform = 'rotateY(-15deg)';
+        setTimeout(() => st.togle.style.transform = '', 400);
+    } else {
+        st.togle.style.transform = 'rotateY(15deg)';
+        setTimeout(() => st.togle.style.transform = '', 400);
+    }
+
+})
+
+st.clickHandler = (e) => {
+
+    if (e.target.tagName === 'LABEL') {
+        setTimeout(() => {
+            st.flap.children[0].textContent = e.target.textContent;
+        }, 250);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    st.flap.children[0].textContent = st.choice2.nextElementSibling.textContent;
+});
+
+document.addEventListener('click', (e) => st.clickHandler(e));
+</script>
+<script type="text/javascript">
+function jsubmit(){
+        var board1 = document.getElementById('choice1');
+        var board2 = document.getElementById('choice2');
+        var class9 = document.getElementById('9');
+        var class10 = document.getElementById('10');
+        var class11 = document.getElementById('11');
+        var class12 = document.getElementById('12');
+
+        
+        if(board1.checked && class9.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+        else if(board1.checked && class10.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+        else if(board1.checked && class11.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+        else if(board1.checked && class12.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+
+        else if(board2.checked && class9.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+        else if(board2.checked && class10.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+        else if(board2.checked && class11.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+        else if(board2.checked && class12.checked){
+            window.open("class 9 maths.html", "_self");
+            }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prep Point</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      td {
+        border-left: 2.5px solid #e91e63;
+        border-bottom: 2.5px solid #e91e63;
+        padding: 8px;
+        text-align: center;
+      }
+      table{
+        margin-bottom: 1.5em;
+        border: 1.2px solid #Fff000;
+        box-shadow: 2px 2px 3px 1px #f2f7a1;
+        font-size: 20px;
+        border-radius: 15px;
+        background-color: #ececec;
+        background-image: linear-gradient(to bottom right, #5F0A87, #A4508B);
+      }
+      table:nth-child(2) {
+        border: 1.2px solid #46C2CB;
+        box-shadow: 2px 2px 3px 1px #9FEFF5;
+      }
+      table:nth-child(3) {
+        border: 1.5px solid #6D67E4;
+        box-shadow: 2px 2px 3px 1px #908AFF;
+      }
+      table:last-child {
+        border: 1.2px solid #03C988;
+        box-shadow: 2px 2px 3px 1px #17FFB3;
+      }
+      caption {
+        position: relative;
+        width: 6em;
+        top: 0.7em;
+        margin-left: 15px;
+        backdrop-filter: blur(15px);
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1.2px solid #FFF000;
+        border-radius: 10px;
+        z-index: 2;
+      }
+      td:last-child {
+        border-right: none;
+      }
+      td:first-child {
+        border-left: none;
+      }
+      tr:last-child > td {
+        border-bottom: none;
+      }
+      i {
+        margin-right: 5px;
+        color:#208FFF;
+        text-shadow: 1px 1px #111;
+        font-size: smaller;
+      }
+      a{
+      flex-wrap: wrap;
+      flex-grow: 1;
+      color: #fff;
+      text-shadow: 1px 1px #FF0000;
+      font-size: smaller;
+    }
+    
+    </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Mohit Iyer</h3>
+        <p class="post">front end developer</p>
+    </div>
+
+    <nav class="navbar">
+       <ul>
+         <li><a href="home.html">home</a></li>
+         <li><a href="about.html">about</a></li>
+         <li><a href="education.html">education</a></li>
+         <li><a href="Study_Materials.html"></a>Study Materials</a></li>
+         
+         <li><a href="contact.html">Get in touch</a></li>
+       </ul>
+     </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> Explore <span>More</span> </h1>
+
+<div class="box-container">
+
+<table style="width:100%">
+  <caption>Class 9<sup>th</sup></caption>
+  <tr>
+    <td><a href="ncertsubject9.html"><i class='fas fa-file-alt'></i><br>Notes</a></td>
+    <td><a href="CBSE_revision.html"><i class='fas fa-book-reader'></i><br>Revision</td>
+    <td><a href="test9.html"><i class='fas fa-brain'></i><br>Test</a></td>
+  </tr>
+</table>
+<table style="width:100%">
+  <caption>Class 10<sup>th</sup></caption>
+  <tr>
+    <td><a href="ncertsubject10.html"><i class='fas fa-file-alt'></i><br>Notes</a></td>
+    <td><a href="CBSE_revision.html"><i class='fas fa-book-reader'></i><br>Revision</td>
+    <td><a href=""><i class='fas fa-brain'></i><br>Test</td>
+  </tr>
+</table>
+<table style="width:100%">
+  <caption>Class 11<sup>th</sup></caption>
+  <tr>
+    <td><a href="ncertsubject11.html"><i class='fas fa-file-alt'></i><br>Notes</a></td>
+    <td><a href="CBSE_revision.html"><i class='fas fa-book-reader'></i><br>Revision</td>
+    <td><a href=""><i class='fas fa-brain'></i><br>Test</td>
+  </tr>
+</table>
+<table style="width:100%">
+  <caption>Class 12<sup>th</sup></caption>
+  <tr>
+    <td><a href="ncertsubject12.html"><i class='fas fa-file-alt'></i><br>Notes</a></td>
+    <td><a href="CBSE_revision.html"><i class='fas fa-book-reader'></i><br>Revision</td>
+    <td><a href=""><i class='fas fa-brain'></i><br>Test</td>
+  </tr>
+</table>
+
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
+</body>
+</html>

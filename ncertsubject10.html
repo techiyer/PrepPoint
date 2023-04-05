@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prep Point</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+                .subject-wrap {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    flex-shrink: 0;
+                    }
+                .subject-wrap a {
+                        margin: 0 21px 15px 0;
+                        font-family: cursive;
+                        font-size: 2.5em;
+                }
+                .bg-slant-box-science {
+                    border: 2px solid #8D72A1;
+                    color: #8D72A1;
+                }
+                .subject-box {
+                    width: 208px;
+                    height: 136px;
+                    background: #fff;
+                    box-shadow: 0px 3px 10px #00000000;
+                    border-radius: 16px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .bg-slant-box-science::after {
+                    border-color: #8D72A1 transparent transparent transparent;
+                }
+                .slant-box {
+                    overflow: hidden;
+                }
+                .right-arrow {
+                    position: absolute;
+                    right: -24px;
+                    bottom: 35px;
+                    z-index: 1;
+                }
+                .subject-box .right-arrow::after {
+                    top: -6px;
+                }
+                .right-arrow::after {
+                    content: '\203A';
+                    width: 1em;
+                    height: 1em;
+                    text-align: center;
+                    -webkit-transition: all .35s;
+                    transition: all .35s;
+                    font-weight: 100;
+                    display: block;
+                    color: #fff;
+                    position: absolute;
+                    top: 3px;
+                    right: 18px;
+                    font-size: 40px;
+                    transform: rotate(30deg);
+                }
+                .slant-box::after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 61px 0px 0px 54px;
+                    border-color: #007bff transparent transparent transparent;
+                    transform: rotate(89deg);
+                    position: absolute;
+                    right: 3px;
+                    bottom: -4px;
+                    overflow: hidden;
+                }
+                .icon-wrap {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin: 6px 0 16px 8px;
+                    display: flex;
+                    flex-shrink: 0;
+                }
+                .bg-slant-box-science {
+                    border: 2px solid #8D72A1;
+                    color: #8D72A1;
+                }
+                .bg-slant-box-science::after {
+                    border-color: #8D72A1 transparent transparent transparent;
+                }
+                .bg-slant-box-maths {
+                    border: 2px solid #668C80;
+                    color: #668C80;
+                }
+                .bg-slant-box-maths::after {
+                    border-color: #668C80 transparent transparent transparent;
+                }
+                .bg-slant-box-hindi {
+                    border: 2px solid #CBAA5F;
+                    color: #CBAA5F;
+                }
+                .bg-slant-box-hindi::after {
+                    border-color: #CBAA5F transparent transparent transparent;
+                }
+                .bg-slant-box-social-studies {
+                    border: 2px solid #C16366;
+                    color: #C16366;
+                }
+                .bg-slant-box-social-studies::after {
+                    border-color: #C16366 transparent transparent transparent;
+                }
+                .bg-slant-box-english {
+                    border: 2px solid #4FA2AD;
+                    color: #4FA2AD;
+                }
+                .bg-slant-box-english::after {
+                    border-color: #4FA2AD transparent transparent transparent;
+                }
+                @media only screen and (max-width: 1023px) {
+                    .subject-wrap {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin: 0;
+                    }
+                    .subject-wrap a {
+                        margin: 0 7px 20px;
+                    }
+                }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Mohit Iyer</h3>
+        <p class="post">front end developer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="education.html">education</a></li>
+            <li><a href="Study_Materials.html">Study Materials</a></li>         
+            <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> Select <span>Subject</span> </h1>
+
+        <div class="subject-wrap" style="margin-top: 5em">
+            <div>
+                <a href="Class 10/10science.html" class="subject-box slant-box bg-slant-box-science">
+                    <span class="icon-wrap">
+                        <img loading="lazy" src="images/science.png" alt="science" title="science" width="53" height="53">
+                    </span>
+                    <em>Science</em>
+                    <i class="right-arrow"></i>
+                </a>
+            </div>
+            <div>
+                <a href="Class 10/10maths.html" class="subject-box slant-box bg-slant-box-maths">
+                    <span class="icon-wrap">
+                        <img loading="lazy" src="images/math.png" alt="maths" title="maths" width="53" height="53">
+                    </span>
+                    <em>Maths</em>
+                    <i class="right-arrow"></i>
+                </a>
+            </div>
+            <div>
+                <a href="Class 10/10hindi.html" class="subject-box slant-box bg-slant-box-hindi">
+                    <span class="icon-wrap">
+                        <img loading="lazy" src="images/hindi.svg" alt="hindi" title="hindi" width="53" height="53">
+                    </span>
+                    <em>Hindi</em>
+                    <i class="right-arrow"></i>
+                </a>
+            </div>
+            <div>
+                <a href="Class 10/10socialstudies.html" class="subject-box slant-box bg-slant-box-social-studies">
+                    <span class="icon-wrap">
+                        <img loading="lazy" src="images/social-studies.svg" alt="social-studies" title="social-studies" width="53" height="53">
+                    </span>
+                    <em>Social Studies</em>
+                    <i class="right-arrow"></i>
+                </a>
+            </div>
+            <div>
+                <a href="Class 10/10english.html" class="subject-box slant-box bg-slant-box-english">
+                    <span class="icon-wrap">
+                        <img loading="lazy" src="images/english.svg" alt="english" title="english" width="53" height="53">
+                    </span>
+                    <em>English</em>
+                    <i class="right-arrow"></i>
+                </a>
+            </div>   
+        </div>
+            
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
