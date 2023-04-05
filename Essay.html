@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prep Point</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <style>
+      .panel {
+        padding: 2px 18px;
+        background-color: none;
+        color: #fff;
+        transition: max-height 0.5s ease-out;
+      }
+      .panel h1{
+          -moz-border-radius: 5px; 
+          -webkit-border-radius: 5px; 
+          border-radius: 5px;
+          border: dashed 2px #e019e0; 
+          margin: 10px; 
+          padding: 10px; 
+          font-size: 20px;
+      }
+      .panel i {
+        margin-right: 5px;
+        color:#208FFF;
+        text-shadow: 1px 1px #111;
+      }
+   .panel a{
+     width: 350px;
+      padding: 15px;
+      margin-bottom: 5px;
+      color: #fff;
+      text-shadow: 2px 2px #FF0000;
+      font-size: 18px;
+      text-align: justify;
+    }
+    .panel li {
+        border: 2px solid #e019e0;
+        font-size: 18px;
+        padding: 1px;
+        margin-bottom: 5px;
+    }
+    h2 {
+      text-align: left;
+      font-size: 18px;
+      margin-left:15px;
+      color:#fff;
+      text-shadow: 2px 2px #DE8B8B;
+    }
+    </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Mohit Iyer</h3>
+        <p class="post">front end developer</p>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="education.html">education</a></li>
+        <li><a href="Study_Materials.html">Study Materials</a></li>
+        
+        <li><a href="contact.html">Get in touch</a></li>
+      </ul>
+    </nav>
+
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> Essay<br><span>Composition</span> </h1>
+
+<div class="box-container">
+          <h2>Here, we are providing the Essay Composition from class 9<sup>th</sup> to class 12<sup>th</sup> of All BOARDS.</h2>
+          <br>
+          <h2>NOTE : Writing Section consists of great marks in your exams. Therefore, Below are few Essays of your reference. Just Go through it! Happy to Help you! ❤️</h2>
+          <div class="panel">
+            <h1>Essay Topic Based on Proverbs</h1>
+              <!-- Recent Posts by Label Start -->
+              <!-- code by BloggerSentral.com -->
+              <script type="text/javascript">
+                function recentpostslist(json) {
+                  document.write('<ol>');
+                  for (var i = 0; i < json.feed.entry.length; i++)
+                  {
+                    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                      if (json.feed.entry[i].link[j].rel == 'alternate') {
+                        break;
+                      }
+                    }
+                    var entryUrl = "'" + json.feed.entry[i].link[j].href + "'"; //bs
+                    var entryTitle = json.feed.entry[i].title.$t
+                    var item = "<li>" + "<a href=" + entryUrl + '" target="_blank">' + entryTitle + "</a> </li>";
+                    document.write(item);
+                  }
+                  document.write('</ol>');
+                }
+              </script>
+              <script src="https://thepreppoint.blogspot.com/feeds/posts/summary/-/Essay%20Based%20on%20Proverbs?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
+              <!-- Recent Posts by Label End -->
+  
+          </div>
+          <div class="panel">
+            <h1>Argumentative Essay</h1>
+              <!-- Recent Posts by Label Start -->
+              <!-- code by BloggerSentral.com -->
+              <script type="text/javascript">
+                function recentpostslist(json) {
+                  document.write('<ol>');
+                  for (var i = 0; i < json.feed.entry.length; i++)
+                  {
+                    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                      if (json.feed.entry[i].link[j].rel == 'alternate') {
+                        break;
+                      }
+                    }
+                    var entryUrl = "'" + json.feed.entry[i].link[j].href + "'"; //bs
+                    var entryTitle = json.feed.entry[i].title.$t
+                    var item = "<li>" + "<a href=" + entryUrl + '" target="_blank">' + entryTitle + "</a> </li>";
+                    document.write(item);
+                  }
+                  document.write('</ol>');
+                }
+              </script>
+              <script src="https://thepreppoint.blogspot.com/feeds/posts/summary/-/Argumentative%20Essay?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
+              <!-- Recent Posts by Label End -->
+  
+          </div>
+</div>
+
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>

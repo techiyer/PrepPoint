@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prep Point</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <style>
+        .accordion {
+        background-color: rgba(107, 60, 138, 1);
+        color: #fff;
+        cursor: pointer;
+        padding: 15px;
+        width: 95%;
+        margin:20px 10px;
+        border-radius: 10px 10px 10px 10px;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: blueviolet;
+      }
+
+      .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .panel {
+        padding: 0 18px;
+        background-color: none;
+        color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+      .panel h1{
+          -moz-border-radius: 5px; 
+          -webkit-border-radius: 5px; 
+          border-radius: 5px;
+          border: dashed 2px #e019e0; 
+          margin: 10px; 
+          padding: 10px; 
+          font-size: 20px;
+      }
+      .panel a{
+        border: 2px solid #e019e0;
+        margin: 8px;
+        padding: 6px;
+        font-size: 12px;
+        text-align: center;
+      }
+      .panel i {
+        margin-right: 5px;
+        color:#208FFF;
+        text-shadow: 1px 1px #111;
+      }
+      .panel a{
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      width: 92px;
+      height: 30px;
+      padding: 10px;
+      margin: 0px;
+      color: #fff;
+      text-shadow: 2px 2px #FF0000;
+    }
+    h2 {
+      text-align: left;
+      font-size: 18px;
+      margin-left:15px;
+      color:#fff;
+      text-shadow: 2px 2px #FF0000;
+    }
+    </style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Mohit Iyer</h3>
+        <p class="post">front end developer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="education.html">education</a></li>
+            <li><a href="Study_Materials.html"></a>Study Materials</a></li>         
+            
+            <li><a href="contact.html">Get in touch</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> ICSE<br><span>REVISION NOTES</span> </h1>
+
+<div class="box-container">
+          <h2>Here, we are providing the Revision Notes from class 9<sup>th</sup> to class 12<sup>th</sup> of CISC BOARDS.</h2>
+          <br>
+          <h2>NOTE : SELECT THE CLASSES & THEN, SELECT SUBJECT OF YOUR CHOICE BELOW TO GET THE REVISION NOTES</h2>
+          <button class="accordion">Class 9
+          </button>
+          <div class="panel">
+            <h1>Revision Notes</h1>
+            <a href="https://drive.google.com/file/d/11oK4Eixvwx-OE5Pvpbuv9Ldv2jKsCoRo/view?usp=share_link#toolbar=0&#view=fit"><i class='fas fa-brain'></i> Physics</a>
+            <a href="#"><i class='fas fa-flask'></i> Chemistry</a>
+            <a href="#"><i class='fas fa-frog'></i> Biology</a> 
+            <a href="#"><i class='far fa-calendar-alt'></i>social</a>
+            <a href="#"><i class='fas fa-globe'></i> Geography</a> 
+            <a href="#"><i class='fas fa-book-reader'></i> Hindi</a>
+            <a href="#"><i class='fas fa-user-graduate'></i> English</a> 
+            <a href="#"><i class='fas fa-laptop'></i> Computer</a> 
+            <a href="#"><i class='fas fa-tasks'></i> Accounts</a>
+          </div>
+          <button class="accordion">Class 10
+          </button>
+          <div class="panel">
+            <h1>Revision Notes</h1>
+            <a href="#"><i class='fas fa-brain'></i> Physics</a>
+            <a href="#"><i class='fas fa-flask'></i> Chemistry</a>
+            <a href="#"><i class='fas fa-frog'></i> Biology</a> 
+            <a href="#"><i class='far fa-calendar-alt'></i>social</a>
+            <a href="#"><i class='fas fa-globe'></i> Geography</a> 
+            <a href="#"><i class='fas fa-book-reader'></i> Hindi</a>
+            <a href="#"><i class='fas fa-user-graduate'></i> English</a> 
+            <a href="#"><i class='fas fa-laptop'></i> Computer</a> 
+            <a href="#"><i class='fas fa-tasks'></i> Accounts</a>
+          </div>
+          <button class="accordion">Class 11
+          </button>
+          <div class="panel">
+            <h1>Revision Notes</h1>
+            <a href="#"><i class='fas fa-brain'></i> Physics</a>
+            <a href="#"><i class='fas fa-flask'></i> Chemistry</a>
+            <a href="#"><i class='fas fa-frog'></i> Biology</a>
+            <a href="#"><i class='far fa-calendar-alt'></i>social</a>
+            <a href="#"><i class='fas fa-globe'></i> Geography</a>
+            <a href="#"><i class='fas fa-book-reader'></i> Hindi</a>
+            <a href="#"><i class='fas fa-user-graduate'></i> English</a>
+            <a href="#"><i class='fas fa-laptop'></i> Computer</a>
+            <a href="#"><i class='fas fa-tasks'></i> Accounts</a>
+          </div>
+          <button class="accordion">Class 12
+          </button>
+          <div class="panel">
+            <h1>Revision Notes</h1>
+            <a href="#"><i class='fas fa-brain'></i> Physics</a>
+            <a href="#"><i class='fas fa-flask'></i> Chemistry</a>
+            <a href="#"><i class='fas fa-frog'></i> Biology</a>
+            <a href="#"><i class='far fa-calendar-alt'></i>social</a>
+            <a href="#"><i class='fas fa-globe'></i> Geography</a>
+            <a href="#"><i class='fas fa-book-reader'></i> Hindi</a>
+            <a href="#"><i class='fas fa-user-graduate'></i> English</a>
+            <a href="#"><i class='fas fa-laptop'></i> Computer</a>
+            <a href="#"><i class='fas fa-tasks'></i> Accounts</a>
+          </div>
+</div>
+
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+        document.getElementsByTagName('a')[0].style.fontSize = "10px";
+      });
+    }
+  </script>
+  <script>
+  
+  </script>
+</body>
+</html>
