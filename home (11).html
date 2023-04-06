@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prep Point</title>
+    
+    <!-- bootstrap modal button -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+      
+      .animatecontainer {
+        display: flex;
+        margin: 8px 0px 8px 0px;
+        width: 100%;
+        height: 170px;
+        border: 1px solid black;
+        border-radius: 20px;
+        box-shadow: 0 8px 8px 4px #111;
+        padding: 5px 5px -5px 5px;
+        background-color: #000000;
+        opacity: 0.5;
+      }
+
+      .app-info {
+        margin-top: -25px;
+        font-size: 25px;
+        font-weight:10!important;
+        color: #ffff00;
+        font-family: 'Lobster', cursive;
+      }
+
+      .animaterow {
+        width: 100%;
+        text-align: center;
+      }
+
+      .animate-charcter {
+        text-transform: uppercase;
+        background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 25px !important;
+        text-align: center;
+        font-family: 'Brandon Grotesque Thin', sans-serif;
+        font-weight: 900;
+        padding: 5px;
+        margin-bottom: -12px;
+      }
+      .gridbtn{
+        display: flex;
+        width: 100%;
+      }
+      .expbtn{
+        margin-left: 60px;
+      }
+
+      @keyframes textclip {
+        to {
+          background-position: 200% center;
+        }
+      }
+      .fa-close {
+        color: #FFFFFF !important;
+        text-shadow: 2px 2px 2px #FF0000;
+      }
+      .modal-title {
+        font-family: cursive;
+        font-size: 28px;
+        text-shadow: 2px 2px 2px #FF0000;
+      }
+      
+      /* Bulb Styles */
+		.bulb {
+			width: 100%;
+			height: 250px;
+		}
+
+		.bulb path:nth-child(2) {
+			fill: none;
+			stroke: white;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 15;
+			transition: stroke 0.5s ease-in-out;
+		}
+
+		.bulb.glow path {
+			stroke: yellow;
+			stroke-width: 20;
+		}
+
+		/* Animation */
+		@keyframes glow {
+			0% {
+				opacity: 0.5;
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0.5;
+			}
+		}
+		.radio-button {
+     display: inline-block;
+     margin: 5px;
+     padding: 8px 12px;
+     font-size: 16px;
+     line-height: 1;
+     color: #fff;
+     background-color: #007BFF;
+     font-size: 24px;
+     font-weight: bold;
+     text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #00b3ff, 0 0 15px #00b3ff, 0 0 40px #00b3ff, 0 0 55px #00b3ff;
+     border-radius: 4px;
+     cursor: pointer;
+     margin-right: 10px;
+    }
+
+   .radio-button input[type="radio"] {
+      /*display: none;*/
+    }
+
+   .radio-button input[type="radio"]:checked + label {
+      color: #000000;
+      background-color: #fff;
+    }
+
+    .modal {
+      background-color: ##FFFFFF00; /*Black w/ opacity */
+      
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+       backdrop-filter: blur(2px);
+       opacity: 0;
+    }
+    .modal-dialog { 
+      top:30%;
+      left: 3%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      width: 350px;
+      border-radius: 15px;
+      transition: all 0.8s ease-in-out;
+     }
+     .modal-content {
+        background-color: #8C00FF75;
+        box-shadow: 3px 3px 5px 2px #ccc;
+        backdrop-filter: blur(5px);
+      }
+    
+    </style>
+
+</head>
+<body>
+<!-- header section starts  -->
+
+<header>
+
+    <div class="user" style="background-image: url(images/bg.jpg)">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Mohit Iyer</h3>
+        <p class="post">front end developer</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="education.html">education</a></li>
+        <li><a href="Study_Materials.html">Study Materials</a></li>
+        
+        <li><a href="contact.html">Get in touch</a></li>
+      </ul>
+    </nav>
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+    <img style="height: 100px; width: 100%; margin-top: 1px;"src="images/applogo.png" alt="logo" />
+    <div class="animatecontainer">
+      <div class="animaterow">
+        <div class="col-md-12 text-center">
+          <h1 class="animate-charcter"> Discover : PrepPoint </h1>
+          <hr><br>
+          <h2 class="app-info"> Proper Preparation Prevents <br>Poor Performance </h2>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 0px;" class="icon homepage">
+      <svg class="bulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="15" d="M304 384v-24c0-29 31.54-56.43 52-76c28.84-27.57 44-64.61 44-108c0-80-63.73-144-144-144a143.6 143.6 0 0 0-144 144c0 41.84 15.81 81.39 44 108c20.35 19.21 52 46.7 52 76v24m16 96h64m-80-48h96m-48-48V256"/>
+        <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M294 240s-21.51 16-38 16s-38-16-38-16"/>
+      </svg>
+    </div>
+    <hr>
+    <p style="margin: -15px -15px; text-align: center;" class="below icon homepage">Learn more about us or explore this app.</p>
+    <hr>
+    <div class="gridbtn">
+      <a href="about.html"><button class="btn abtbtn">about me <i class="fa fa-user"></i></button></a>
+      <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info btn-lg expbtn">Explore <i class="fa fa-book"></i>
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+              <h4 class="modal-title">Choose Your Board</h4>
+            </div>
+            <div class="modal-body">
+                <label class="radio-button"><input type="radio" name="link" value="ExploreCBSE.html"> CBSE</label>
+                <label class="radio-button"><input type="radio" name="link" value="ExploreICSE.html"> ICSE</label>
+            </div>
+            <div class="modal-footer">
+                <button onclick="openLink()" type="button" class="btn">Go</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- donate Us Button by me... enjoy! -->
+<div style="margin-top: 15px;" class="wrapper">
+  <a href="upi://pay?pn=Mohit%20Iyer&pa=7726914941@apl&cu=INR&am=99&tn=donate">
+    <img style="height: 50px; width:250px;" src="images/buy tea.svg">
+  </a>
+</div>
+
+<!-- home section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<!--<script src="js/animation.js"></script>-->
+<!-- JavaScript for glowing bulb-->
+	<script>
+		setInterval(function() {
+			var bulb = document.querySelector(".bulb");
+			bulb.classList.toggle("glow");
+		}, 2000);
+	</script>
+	
+	<script>
+	function openLink() {
+			var radios = document.getElementsByName("link");
+			for (var i = 0; i < radios.length; i++) {
+				if (radios[i].checked) {
+					window.open(radios[i].value, "_self");
+					return;
+				}
+			}
+			alert("Please select a link.");
+		}
+	</script>
+</body>
+</html>
