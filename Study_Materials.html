@@ -317,29 +317,96 @@
 <section class="portfolio" id="portfolio">
 
 <h1 class="heading"> Study <span>Materials</span> </h1>
+
     <ul class="main-ul">
-      <li><div class="category"><a href="#english">English</a></div>
+      <li><div class="category">English</div>
         <ul class="subcategory">
-          <li><a href="essay.html">Essay composition</a></li>
-          <li><a href="letter.html">Letter composition</a></li>
-          <li><a href="#notice">Notice composition</a></li>
-          <li><a href="#antonyms">Antonyms and synonyms</a></li>
+          <li><a href="Study Material Content/essay.html">Essay composition</a></li>
+          <li><a href="Study Material Content/letter.html">Letter composition</a></li>
+          <script type="text/javascript">
+               function recentpostslist(json) {
+                  document.write('<ul>');
+                  for (var i = 0; i < json.feed.entry.length; i++)
+                  {
+                   for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                    if (json.feed.entry[i].link[j].rel == 'alternate') {
+                       break;
+                    }
+                  }
+                  var entryUrl = "'" + json.feed.entry[i].link[j].href + "'"; //bs
+                  var entryTitle = json.feed.entry[i].title.$t
+                  var item = "<li>" + "<a href=" + entryUrl + '" target="_self">' + entryTitle + "</a> </li>";
+                  document.write(item);
+                 }
+                 document.write('</ul>');
+                }
+            </script>
+            <script src="https://thepreppoint.blogspot.com/feeds/posts/summary/-/English%20notes?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
+           <!-- Recent Posts by Label End -->
         </ul>
       </li>
-      <li><div class="category"><a href="#physics">Physics</a></div>
+      <li><div class="category">Physics</div>
         <ul class="subcategory">
+          <!-- Recent Posts by Label Start -->
+            <!-- code by BloggerSentral.com -->
+            <script type="text/javascript">
+               function recentpostslist(json) {
+                  document.write('<ul>');
+                  for (var i = 0; i < json.feed.entry.length; i++)
+                  {
+                   for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                    if (json.feed.entry[i].link[j].rel == 'alternate') {
+                       break;
+                    }
+                  }
+                  var entryUrl = "'" + json.feed.entry[i].link[j].href + "'"; //bs
+                  var entryTitle = json.feed.entry[i].title.$t
+                  var item = "<li>" + "<a href=" + entryUrl + '" target="_self">' + entryTitle + "</a> </li>";
+                  document.write(item);
+                 }
+                 document.write('</ul>');
+                }
+            </script>
+            <script src="https://thepreppoint.blogspot.com/feeds/posts/summary/-/Physics?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
+          <!-- Recent Posts by Label End -->
           <li><a href="#difference">Difference between</a></li>
           <li><a href="#formulas">Chapterwise formulas</a></li>
         </ul>
       </li>
-      <li><div class="category"><a href="#chemistry">Chemistry</a></div>
+      <li><div class="category">Chemistry</div>
         <ul class="subcategory">
           <li><a href="#chemdifference">Difference between</a></li>
         </ul>
       </li>
-      <li><div class="category"><a href="#maths">Maths</a></div>
+      <li><div class="category">Maths</div>
         <ul class="subcategory">
           <li><a href="#mathformulas">Important formulas</a></li>
+        </ul>
+      </li>
+      <li><div class="category">General knowledge</div>
+        <ul class="subcategory">
+            <!-- Recent Posts by Label Start -->
+            <!-- code by BloggerSentral.com -->
+            <script type="text/javascript">
+               function recentpostslist(json) {
+                  document.write('<ul>');
+                  for (var i = 0; i < json.feed.entry.length; i++)
+                  {
+                   for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                    if (json.feed.entry[i].link[j].rel == 'alternate') {
+                       break;
+                    }
+                  }
+                  var entryUrl = "'" + json.feed.entry[i].link[j].href + "'"; //bs
+                  var entryTitle = json.feed.entry[i].title.$t
+                  var item = "<li>" + "<a href=" + entryUrl + '" target="_self">' + entryTitle + "</a> </li>";
+                  document.write(item);
+                 }
+                 document.write('</ul>');
+                }
+            </script>
+            <script src="https://thepreppoint.blogspot.com/feeds/posts/summary/-/Static%20GK?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
+           <!-- Recent Posts by Label End -->
         </ul>
       </li>
     </ul>

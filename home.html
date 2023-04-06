@@ -132,7 +132,7 @@
      font-size: 16px;
      line-height: 1;
      color: #fff;
-     background-color: #007bff;
+     background-color: #007BFF;
      font-size: 24px;
      font-weight: bold;
      text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #00b3ff, 0 0 15px #00b3ff, 0 0 40px #00b3ff, 0 0 55px #00b3ff;
@@ -142,12 +142,14 @@
     }
 
    .radio-button input[type="radio"] {
-      display: none;
+      /*display: none;*/
     }
 
-    .radio-button input[type="radio"]:checked + label {
-       background-color: #0062CC;
+   .radio-button input[type="radio"]:checked + label {
+      color: #000000;
+      background-color: #fff;
     }
+
     .modal {
       background-color: ##FFFFFF00; /*Black w/ opacity */
       
@@ -236,8 +238,8 @@
               <h4 class="modal-title">Choose Your Board</h4>
             </div>
             <div class="modal-body">
-                <label class="radio-button"><input type="radio" name="link" value="ExploreCBSE.html">CBSE</label>
-                <label class="radio-button"><input type="radio" name="link" value="ExploreICSE.html">ICSE</label>
+                <label class="radio-button"><input type="radio" name="link" value="ExploreCBSE.html"> CBSE</label>
+                <label class="radio-button"><input type="radio" name="link" value="ExploreICSE.html"> ICSE</label>
             </div>
             <div class="modal-footer">
                 <button onclick="openLink()" type="button" class="btn">Go</button>
